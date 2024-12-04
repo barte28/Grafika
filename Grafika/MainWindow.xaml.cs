@@ -24,5 +24,23 @@ namespace Grafika
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            image_cat.Source = new BitmapImage(new Uri("elephant.jpg",UriKind.Relative));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            List<string> listaObrazkow = new List<string>();
+            listaObrazkow.Add("cat.jpg");
+            listaObrazkow.Add("elephant.jpg");
+            listaObrazkow.Add("greylag-goose.jpg");
+            listaObrazkow.Add("mountains.jpg");
+            Random random = new Random();
+            int indeks = random.Next(listaObrazkow.Count);
+            image_cat.Source = new BitmapImage(new Uri(listaObrazkow[indeks], UriKind.Relative));
+
+        }
     }
 }

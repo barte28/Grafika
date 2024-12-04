@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Grafika"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <Image Source="../../../cat.jpg" Height="300" x:Name="image_cat"/>
+        <Button Click="Button_Click">Zmień obraz</Button>
+        <Button Click="Button_Click_1">Losuj obraz</Button>
+    </StackPanel>
 </Window>
